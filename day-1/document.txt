@@ -9,18 +9,18 @@
     C:\\Users\\yashr> D:
     D:\\> mkdir node_tutorial
     D:\\> cd node_tutorial
-    D:\\node_tutorial> mkdir demo-1
-    D:\\node_tutorial> cd demo-1
+    D:\\node_tutorial> mkdir day-1
+    D:\\node_tutorial> cd day-1
 
 3. Initialize NPM:
--> D:\\node_tutorial\\demo-1> npm init
+-> D:\\node_tutorial\\day-1> npm init
     This utility will walk you through creating a package.json file.
     It only covers the most common items and tries to guess sensible defaults.
     See 'npm help init' for definitive documentation on these fields and exactly what they do.
     Use 'npm install <pkg>' afterwards to install a package and save it as a dependency in the package.json file.
     Press ^C at any time to quit.
     Follow the prompts:
-        package name: (demo-1) {Press Enter}
+        package name: (day-1) {Press Enter}
         version: (1.0.0) {Press Enter}
         description: {Your description or Press Enter}
         entry point: (index.js) {Press Enter}
@@ -31,7 +31,7 @@
         license: (ISC) {Press Enter}
     Confirm the generated package.json file:
     {
-      "name": "demo-1",
+      "name": "day-1",
       "version": "1.0.0",
       "main": "index.js",
       "scripts": {
@@ -44,10 +44,10 @@
     Is this OK? (yes) {Press Enter}
 
 4. Install Packages:
--> D:\\node_tutorial\\demo-1> npm install express
+-> D:\\node_tutorial\\day-1> npm install express
 
 5. Create index.js File:
--> In the demo-1 folder, create a file named index.js.
+-> In the day-1 folder, create a file named index.js.
 -> Add the following content to index.js:
 
     // Import the express function from the express module (web application framework)
@@ -66,7 +66,7 @@
 
 6. Run index.js File on Server:
 -> In the Command Prompt, run the index.js file:
-    D:\\node_tutorial\\demo-1> node index.js
+    D:\\node_tutorial\\day-1> node index.js
 -> You should see the following message indicating that the server is running:
     Server running on port 4000
 
