@@ -1,0 +1,65 @@
+1. Create Folder Structure:
+-> Open Command Prompt (CMD) and execute the following commands to create and navigate to your project folder:
+    - D:\\node_tutorial> mkdir demo-2
+    - D:\\node_tutorial> cd demo-2
+
+2. Initialize NPM:
+-> D:\\node_tutorial\\demo-2> npm init
+    This utility will walk you through creating a package.json file.
+    It only covers the most common items and tries to guess sensible defaults.
+    See 'npm help init' for definitive documentation on these fields and exactly what they do.
+    Use 'npm install <pkg>' afterwards to install a package and save it as a dependency in the package.json file.
+    Press ^C at any time to quit.
+    Follow the prompts:
+        package name: (demo-2) {Press Enter}
+        version: (1.0.0) {Press Enter}
+        description: {Your description or Press Enter}
+        entry point: (index.js) {Press Enter}
+        test command: {Press Enter}
+        git repository: {Press Enter}
+        keywords: {Press Enter}
+        author: Sparrow Softtech {Press Enter}
+        license: (ISC) {Press Enter}
+    Confirm the generated package.json file:
+    {
+      "name": "demo-2",
+      "version": "1.0.0",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \\"Error: no test specified\\" && exit 1"
+      },
+      "author": "Sparrow Softtech",
+      "license": "ISC",
+      "description": ""
+    }
+    Is this OK? (yes) {Press Enter}
+
+3. Install Packages:
+-> Install the necessary packages by running:
+    - D:\\node_tutorial\\demo-2> npm install express dotenv mongoose
+
+4. Create Required Files and Folders:
+-> Create the following files and folders in the `demo-2` directory:
+    - `index.js`
+    - `.env`
+    - `.env.dev`
+    - `config` folder
+        - `config.js`
+        - `db.config.js`
+
+5. Set Scripts in package.json:
+-> Update the `scripts` section in your `package.json` to include start and test commands:
+    "scripts": {
+        "start": "cross-env NODE_ENV=production nodemon index.js",
+        "start:dev": "cross-env NODE_ENV=development nodemon index.js",
+        "test": "NODE_ENV=test jest"
+    }
+
+6. Run index.js File on Server:
+-> Set the environment variable and run the `index.js` file:
+-> For development:
+    - D:\\node_tutorial\\demo-2> $env:NODE_ENV="development"
+    - D:\\node_tutorial\\demo-2> node index.js
+-> For production:
+    - D:\\node_tutorial\\demo-2> $env:NODE_ENV="production"
+    - D:\\node_tutorial\\demo-2> node index.js
