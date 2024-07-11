@@ -1,0 +1,80 @@
+1. Check Environment:
+-> Open Command Prompt (CMD) and write:
+    node -v
+    npm -v
+-> If Node.js and npm are not installed, download and install them from Node.js official website (https://nodejs.org).
+
+2. Create Folder Structure:
+-> Open Command Prompt (CMD) and write:
+    C:\\Users\\yashr> D:
+    D:\\> mkdir node_tutorial
+    D:\\> cd node_tutorial
+    D:\\node_tutorial> mkdir demo-1
+    D:\\node_tutorial> cd demo-1
+
+3. Initialize NPM:
+-> D:\\node_tutorial\\demo-1> npm init
+    This utility will walk you through creating a package.json file.
+    It only covers the most common items and tries to guess sensible defaults.
+    See 'npm help init' for definitive documentation on these fields and exactly what they do.
+    Use 'npm install <pkg>' afterwards to install a package and save it as a dependency in the package.json file.
+    Press ^C at any time to quit.
+    Follow the prompts:
+        package name: (demo-1) {Press Enter}
+        version: (1.0.0) {Press Enter}
+        description: {Your description or Press Enter}
+        entry point: (index.js) {Press Enter}
+        test command: {Press Enter}
+        git repository: {Press Enter}
+        keywords: {Press Enter}
+        author: Sparrow Softtech {Press Enter}
+        license: (ISC) {Press Enter}
+    Confirm the generated package.json file:
+    {
+      "name": "demo-1",
+      "version": "1.0.0",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \\"Error: no test specified\\" && exit 1"
+      },
+      "author": "Sparrow Softtech",
+      "license": "ISC",
+      "description": ""
+    }
+    Is this OK? (yes) {Press Enter}
+
+4. Install Packages:
+-> D:\\node_tutorial\\demo-1> npm install express
+
+5. Create index.js File:
+-> In the demo-1 folder, create a file named index.js.
+-> Add the following content to index.js:
+
+    // Import the express function from the express module (web application framework)
+    var express = require("express");
+
+    // Create an instance of an Express application
+    var app = express();
+
+    // Middleware function to parse JSON payloads
+    app.use(express.json());
+
+    // Start the server on the defined port 4000
+    app.listen(4000, () => {
+        console.log(\`Server running on port \${4000}\`);
+    });
+
+6. Run index.js File on Server:
+-> In the Command Prompt, run the index.js file:
+    D:\\node_tutorial\\demo-1> node index.js
+-> You should see the following message indicating that the server is running:
+    Server running on port 4000
+
+7. Test GET Request Using Postman:
+-> Open Postman application.
+-> Set up a GET request:
+    - Set the HTTP method to GET.
+    - Enter the URL: http://localhost:4000/
+-> Send the request by clicking on the "Send" button.
+-> Check the response in the response body area of Postman.
+    - Expected Response: "Hello, World!"
