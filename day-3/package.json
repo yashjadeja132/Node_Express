@@ -1,0 +1,20 @@
+{
+  "name": "day-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production nodemon index.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test": "NODE_ENV=test jest"
+  },
+  "author": "Sparrow Softtech",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.0",
+    "morgan": "^1.10.0"
+  }
+}
