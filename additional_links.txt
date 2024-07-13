@@ -1,0 +1,2 @@
+POSTMAN_COLLECTION = https://app.getpostman.com/join-team?invite_code=b73998a3e2dda9ac43bedeb6ca258473&target_code=5f9c0b7bbfb1f90c5d45b909ed0d7abe (Use Node_Express Environment)
+HTTP_STATUS_CODES = https://restfulapi.net/http-status-codes/
